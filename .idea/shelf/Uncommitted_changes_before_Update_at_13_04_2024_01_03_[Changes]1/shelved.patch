@@ -1,0 +1,169 @@
+Index: Html/Main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Main</title>\r\n    <link rel=\"stylesheet\" href=\"../Css/Main.css\">\r\n</head>\r\n<body>\r\n<header>\r\n    <div class=\"top\">\r\n        <div class=\"container\">\r\n                    <span class=\"logo\">\r\n                        <a href=\"/\" class=\"logo-link\">\r\n                            <img src=\"../Images/logo.png\" height=\"80\" width=\"80\" alt=\"logo\"/>\r\n                            <p class=\"logo-text\">Traveler's Tales</p>\r\n                        </a>\r\n                    </span>\r\n            <ul class=\"nav\">\r\n                <li>Home</li>\r\n                <li>Latest</li>\r\n                <li>About</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n    <section class=\"presentation\">\r\n        <div class=\"main-block\">\r\n            <div class=\"main-img\">\r\n                <img src=\"../Images/banner.png\" class=\"banner\" alt=\"IMAGE\"/>\r\n            </div>\r\n            <div class=\"main-text\">\r\n                <h5>\r\n                    ILLUSTRATION\r\n                </h5>\r\n                <h1>\r\n                    JAPAN HOUSE OPENS IN MOUNTAINSIDE TO FOSTER PEAK CREATIVITY.\r\n                </h1>\r\n                <p>\r\n                    Enim omittam qui id, ex quo atqui dictas complectitur. Nec ad timeam accusata, hinc justo\r\n                    falli id eum, ferri novum molestie eos cu.\r\n                </p>\r\n                <strong>\r\n                    BY RETA TORPHY\r\n                </strong>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</header>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Html/Main.html b/Html/Main.html
+--- a/Html/Main.html	
++++ b/Html/Main.html	
+@@ -11,7 +11,7 @@
+         <div class="container">
+                     <span class="logo">
+                         <a href="/" class="logo-link">
+-                            <img src="../Images/logo.png" height="80" width="80" alt="logo"/>
++                            <img class="logo-image" src="../Images/logo.png" height="80" width="80" alt="logo"/>
+                             <p class="logo-text">Traveler's Tales</p>
+                         </a>
+                     </span>
+Index: Css/Main.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Tenor+Sans&family=Work+Sans:wght@300&display=swap');\r\n\r\nheader .logo-text {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-weight: 600;\r\n    font-size: 25px;\r\n    height: inherit;\r\n    vertical-align: middle;\r\n}\r\n\r\nheader .presentation {\r\n    margin: 50px 0;\r\n}\r\n\r\nimg, .logo-text {\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n}\r\n\r\n.main-block {\r\n    display: flex;\r\n    align-items: flex-start;\r\n    position: relative;\r\n}\r\n\r\n@media (max-width: 1230px) {\r\n    .main-img:not(:last-child) {\r\n        margin-right: calc(15px + 35 * ((100vw - 320px) / 910));\r\n    }\r\n}\r\n\r\n@media (max-width: 1920.2px) {\r\n    .main-img {\r\n        flex-basis: 720px;\r\n    }\r\n}\r\n\r\n@media (max-width: 1920.2px) and (max-width: 1230px) {\r\n    .main-img {\r\n        flex-basis: calc(120px + 600 * ((100vw - 320px) / 910));\r\n    }\r\n}\r\n\r\n.main-text {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\nh1 {\r\n    font-family: \"Tenor Sans\";\r\n    font-size: 36px;\r\n    font-weight: 500;\r\n}\r\n\r\nh5 {\r\n    text-transform: uppercase;\r\n    font-size: 10px;\r\n    font-weight: 400;\r\n    line-height: 120%;\r\n    letter-spacing: 1px;\r\n    color: #999999;\r\n}\r\n\r\n.banner {\r\n    vertical-align: top;\r\n}\r\n\r\n/*----------------------------------NAV-------------------------------------------------------------------------------*/\r\nheader ul.nav {\r\n    float: right;\r\n    list-style: none;\r\n}\r\n\r\nheader ul.nav li {\r\n    display: inline;\r\n    margin-left: 25px;\r\n    cursor: pointer;\r\n    font-weight: 400;\r\n}\r\n\r\n/*----------------------------------MEDIA-RULES-----------------------------------------------------------------------*/\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Css/Main.css b/Css/Main.css
+--- a/Css/Main.css	
++++ b/Css/Main.css	
+@@ -17,35 +17,6 @@
+     vertical-align: middle;
+ }
+ 
+-.main-block {
+-    display: flex;
+-    align-items: flex-start;
+-    position: relative;
+-}
+-
+-@media (max-width: 1230px) {
+-    .main-img:not(:last-child) {
+-        margin-right: calc(15px + 35 * ((100vw - 320px) / 910));
+-    }
+-}
+-
+-@media (max-width: 1920.2px) {
+-    .main-img {
+-        flex-basis: 720px;
+-    }
+-}
+-
+-@media (max-width: 1920.2px) and (max-width: 1230px) {
+-    .main-img {
+-        flex-basis: calc(120px + 600 * ((100vw - 320px) / 910));
+-    }
+-}
+-
+-.main-text {
+-    display: flex;
+-    flex-direction: column;
+-}
+-
+ h1 {
+     font-family: "Tenor Sans";
+     font-size: 36px;
+@@ -78,4 +49,40 @@
+     font-weight: 400;
+ }
+ 
++.logo-link:visited {
++    color: black;
++}
++
++.logo-link:link {
++    color: black;
++}
++/*----------------------------------MAIN-CONTENT----------------------------------------------------------------------*/
++.main-block {
++    display: flex;
++    align-items: flex-start;
++    position: relative;
++}
++
++.main-text {
++    margin-left: 55px;
++    display: flex;
++    flex-direction: column;
++}
+ /*----------------------------------MEDIA-RULES-----------------------------------------------------------------------*/
++@media (max-width: 1230px) {
++    .main-img:not(:last-child) {
++        margin-right: calc(15px + 35 * ((100vw - 320px) / 910));
++    }
++}
++
++@media (max-width: 1920.2px) {
++    .main-img {
++        flex-basis: 720px;
++    }
++}
++
++@media (max-width: 1920.2px) and (max-width: 1230px) {
++    .main-img {
++        flex-basis: calc(120px + 600 * ((100vw - 320px) / 910));
++    }
++}
+\ No newline at end of file
+Index: .idea/project-News.iml
+===================================================================
+diff --git a/.idea/project-News.iml b/.idea/project-News.iml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/project-News.iml	
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/modules.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/project-News.iml" filepath="$PROJECT_DIR$/.idea/project-News.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/vcs.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	
++++ b/.idea/.gitignore	
+@@ -0,0 +1,5 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/

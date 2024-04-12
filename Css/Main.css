@@ -23,24 +23,6 @@ img, .logo-text {
     position: relative;
 }
 
-@media (max-width: 1230px) {
-    .main-img:not(:last-child) {
-        margin-right: calc(15px + 35 * ((100vw - 320px) / 910));
-    }
-}
-
-@media (max-width: 1920.2px) {
-    .main-img {
-        flex-basis: 720px;
-    }
-}
-
-@media (max-width: 1920.2px) and (max-width: 1230px) {
-    .main-img {
-        flex-basis: calc(120px + 600 * ((100vw - 320px) / 910));
-    }
-}
-
 .main-text {
     display: flex;
     flex-direction: column;
@@ -78,4 +60,32 @@ header ul.nav li {
     font-weight: 400;
 }
 
+.logo-link.link {
+    color: black;
+}
+
+.logo-link.hover {
+    color: black;
+}
+
+.logo-link.visited {
+    color: black;
+}
 /*----------------------------------MEDIA-RULES-----------------------------------------------------------------------*/
+@media (max-width: 1230px) {
+    .main-img:not(:last-child) {
+        margin-right: calc(15px + 35 * ((100vw - 320px) / 910));
+    }
+}
+
+@media (max-width: 1920.2px) {
+    .main-img {
+        flex-basis: 720px;
+    }
+}
+
+@media (max-width: 1920.2px) and (max-width: 1230px) {
+    .main-img {
+        flex-basis: calc(120px + 600 * ((100vw - 320px) / 910));
+    }
+}
