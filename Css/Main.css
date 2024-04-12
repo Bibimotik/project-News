@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Tenor+Sans&family=Work+Sans:wght@300&display=swap');
 
+body {
+    margin: 0 20px 0 20px;
+}
+
 header .logo-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -8,13 +12,51 @@ header .logo-text {
     vertical-align: middle;
 }
 
-header .presentation {
-    margin: 50px 0;
-}
-
 img, .logo-text {
     display: inline-block;
     vertical-align: middle;
+}
+/*----------------------------------NAV-------------------------------------------------------------------------------*/
+header {
+    border-bottom-color: #E6E6E6;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+.nav li:nth-of-type(3) {
+    margin-right: 23px;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 59px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.logo-link:link {
+    color: black;
+}
+
+.logo-link:hover {
+    color: black;
+}
+
+.logo-link:visited {
+    color: black;
+}
+/*----------------------------------MAIN-CONTENT----------------------------------------------------------------------*/
+.presentation {
+    margin-top: 25px;
 }
 
 .main-block {
@@ -26,6 +68,7 @@ img, .logo-text {
 .main-text {
     display: flex;
     flex-direction: column;
+    margin-left: 55px;
 }
 
 h1 {
@@ -45,31 +88,6 @@ h5 {
 
 .banner {
     vertical-align: top;
-}
-
-/*----------------------------------NAV-------------------------------------------------------------------------------*/
-header ul.nav {
-    float: right;
-    list-style: none;
-}
-
-header ul.nav li {
-    display: inline;
-    margin-left: 25px;
-    cursor: pointer;
-    font-weight: 400;
-}
-
-.logo-link.link {
-    color: black;
-}
-
-.logo-link.hover {
-    color: black;
-}
-
-.logo-link.visited {
-    color: black;
 }
 /*----------------------------------MEDIA-RULES-----------------------------------------------------------------------*/
 @media (max-width: 1230px) {
