@@ -16,6 +16,10 @@ img, .logo-text {
     display: inline-block;
     vertical-align: middle;
 }
+
+a {
+    text-decoration: none;
+}
 /*----------------------------------NAV-------------------------------------------------------------------------------*/
 header {
     border-bottom-color: #E6E6E6;
@@ -52,6 +56,20 @@ header ul.nav li {
 }
 
 .logo-link:visited {
+    color: black;
+}
+
+ul li a:link {
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+ul li a:visited {
+    color: black;
+}
+
+ul li a:hover {
     color: black;
 }
 /*----------------------------------MAIN-CONTENT----------------------------------------------------------------------*/
