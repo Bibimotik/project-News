@@ -26,3 +26,59 @@ ul li a:hover::after {
     width: 100%;
     transition-delay: 0.1s;
 }
+/*----------------------------------ANIMATION-FOOTER------------------------------------------------------------------*/
+.main-footer-link::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.2s ease-in-out;
+}
+
+.main-footer-link::before {
+    top: 0;
+    left: 0;
+}
+
+.main-footer-link::after {
+    bottom: 0;
+    right: 0;
+}
+
+.main-footer-link:hover::before {
+    width: 100%;
+}
+
+.main-footer-link:hover::after {
+    width: 100%;
+    transition-delay: 0.1s;
+}
+/*----------------------------------ANIMATION-FOOTER-CATEGORIES-------------------------------------------------------*/
+.categories ul li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.2s ease-in-out;
+}
+
+.categories ul li a::before {
+    top: 0;
+    left: 0;
+}
+
+.categories ul li a::after {
+    bottom: 0;
+    right: 0;
+}
+
+.categories ul li a:hover::before {
+    width: 100%;
+}
+
+.categories ul li a:hover::after {
+    width: 100%;
+    transition-delay: 0.1s;
+}
