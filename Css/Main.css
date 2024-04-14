@@ -5,6 +5,11 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
 }
 
 .top, section, .bottom {
@@ -22,10 +27,6 @@ header .logo-text {
 img, .logo-text {
     display: inline-block;
     vertical-align: middle;
-}
-
-a {
-    text-decoration: none;
 }
 /*----------------------------------NAV-------------------------------------------------------------------------------*/
 header {
@@ -52,32 +53,6 @@ header ul.nav li {
     margin-left: 59px;
     cursor: pointer;
     font-weight: 400;
-}
-
-.logo-link:link {
-    color: black;
-}
-
-.logo-link:hover {
-    color: black;
-}
-
-.logo-link:visited {
-    color: black;
-}
-
-ul li a:link {
-    color: black;
-    position: relative;
-    display: inline-block;
-}
-
-ul li a:visited {
-    color: black;
-}
-
-ul li a:hover {
-    color: black;
 }
 /*----------------------------------MAIN-CONTENT----------------------------------------------------------------------*/
 .presentation {
@@ -129,7 +104,7 @@ ul li a:hover {
 /*----------------------------------FOOTER----------------------------------------------------------------------------*/
 footer {
     margin-top: 25px;
-    height: 600px;
+    height: 500px;
     color: white;
     background-color: #141414;
 }
@@ -142,25 +117,13 @@ footer {
     border-bottom-width: 1px;
 }
 
-.main-footer-link:link {
-    color: white;
-}
-
-.main-footer-link:hover {
-    color: white;
-}
-
-.main-footer-link:visited {
-    color: white;
-}
-
 .footer-text {
     position: absolute;
     margin-top: 50px;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 20px;
 }
-
+/*footer-categories*/
 .categories {
     margin-top: 50px;
 }
@@ -183,7 +146,8 @@ footer {
 
 .categories ul {
     display: inline-block;
-    margin-right: 14.4%;/*180px*/
+    margin-right: 14.5%;/*180px*/
+    margin-bottom: 50px;
 }
 
 .categories ul li {
@@ -191,23 +155,6 @@ footer {
     margin-bottom: 30px;
     font-family: "Libre Franklin", sans-serif;
     font-size: 14px;
-}
-
-.categories ul li a:link {
-    color: white;
-}
-
-.categories ul li a:hover {
-    color: white;
-}
-
-.categories ul li a:visited {
-    color: white;
-}
-
-.send-email {
-    display: inline;
-    float: right;
 }
 
 .send-email button {
@@ -227,6 +174,37 @@ footer {
     outline: none;
     height: 50px;
     width: 220px;
+}
+/*footer-information*/
+.information .info-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.information .first-info {
+    margin-right: 14.4%;
+}
+
+.info-container h3 {
+    color: #666666;
+    font-size: 10px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+.information ul {
+    display: inline-block;
+    margin-right: 14.5%;
+}
+
+.information ul li {
+    list-style-type: none;
+    margin-bottom: 30px;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 14px;
+}
+
+.information .second-ul {
+    margin-left: 18px;
 }
 /*----------------------------------MEDIA-RULES-----------------------------------------------------------------------*/
 @media (max-width: 1230px) {
