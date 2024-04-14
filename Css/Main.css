@@ -165,21 +165,30 @@ footer {
     margin-top: 50px;
 }
 
-.categories h3 {
+.categories .topics-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.topics-container .second-topic {
+    margin-right: 164px;
+}
+
+.topics-container h3 {
     color: #666666;
     font-size: 10px;
     font-family: "Libre Franklin", sans-serif;
-    margin-bottom: 30px;
 }
+
 .categories ul {
     display: inline-block;
-    margin-right: 160px;
+    margin-right: 14.4%;/*180px*/
 }
 
 .categories ul li {
     list-style-type: none;
     margin-bottom: 30px;
-    margin-right: 20px;
     font-family: "Libre Franklin", sans-serif;
     font-size: 14px;
 }
@@ -198,6 +207,7 @@ footer {
 
 .send-email {
     display: inline;
+    float: right;
 }
 
 .send-email button {
@@ -212,6 +222,9 @@ footer {
 }
 
 .send-email input {
+    padding: 0 0 0 10px;
+    font-family: "Libre Franklin", sans-serif;
+    outline: none;
     height: 50px;
     width: 220px;
 }
