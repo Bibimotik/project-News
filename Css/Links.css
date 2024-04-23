@@ -76,3 +76,29 @@ ul li a:hover {
 .information ul li a:focus {
     color: white;
 }
+/*----------------------------------REGISTRATION-LINKS----------------------------------------------------------------------*/
+.registration-link:link {
+    color: black;
+}
+
+.registration-link:hover {
+    color: black;
+}
+
+.registration-link:visited {
+    color: black;
+}
+
+.registration-link:link {
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.registration-link:visited {
+    color: black;
+}
+
+.registration-link:hover {
+    color: black;
+}
