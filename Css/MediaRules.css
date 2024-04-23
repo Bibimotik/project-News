@@ -28,3 +28,12 @@
         margin: 0 246px 0 246px;
     }
 }
+
+@media (min-width: 1920px) {
+    .second-section .cards-container {
+        margin: 0 11% 0 11%;
+    }
+    .second-section .cards-title {
+        margin: 0 11% 0 11%;
+    }
+}
