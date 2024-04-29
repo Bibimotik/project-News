@@ -1,5 +1,5 @@
 document.getElementById("registration").addEventListener("click", function() {
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("mail").value;
     let name = document.getElementById("name").value;
     let password = document.getElementById("password").value;
 
@@ -16,8 +16,9 @@ document.getElementById("registration").addEventListener("click", function() {
 
     let link = document.createElement("a");
     link.href = url;
-    //ПОМЕНЯЙ ССЫЛКУ ДЛЯ СОХРАНЕНИЯ
-    link.download = "D:/Учеба/project-News/Data/registration.json";
+
+    let timestamp = new Date().getTime();
+    link.download = "data_registration_" + timestamp + ".json";
     link.click();
 
     URL.revokeObjectURL(url);
