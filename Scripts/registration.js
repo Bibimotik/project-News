@@ -11,15 +11,42 @@ document.getElementById("registration").addEventListener("click", function() {
 
     let jsonData = JSON.stringify(userData, null, 2);
 
-    let blob = new Blob([jsonData], { type: "application/json" });
-    let url = URL.createObjectURL(blob);
+    // Создание JSON Blob
+    let jsonBlob = new Blob([jsonData], { type: "application/json" });
+    let jsonUrl = URL.createObjectURL(jsonBlob);
 
-    let link = document.createElement("a");
-    link.href = url;
+    // Создание XML Blob
+    let xmlData = convertToXml(userData); // Функция convertToXml преобразует объект userData в XML-строку
+    let xmlBlob = new Blob([xmlData], { type: "application/xml" });
+    let xmlUrl = URL.createObjectURL(xmlBlob);
 
-    let timestamp = new Date().getTime();
-    link.download = "data_registration_" + timestamp + ".json";
-    link.click();
+    // Создание ссылки для скачивания JSON файла
+    let jsonLink = document.createElement("a");
+    jsonLink.href = jsonUrl;
+    let jsonTimestamp = new Date().getTime();
+    jsonLink.download = "data_registration_" + jsonTimestamp + ".json";
 
-    URL.revokeObjectURL(url);
+    // Создание ссылки для скачивания XML файла
+    let xmlLink = document.createElement("a");
+    xmlLink.href = xmlUrl;
+    let xmlTimestamp = new Date().getTime();
+    xmlLink.download = "data_registration_" + xmlTimestamp + ".xml";
+
+    // Скачивание JSON и XML файлов
+    jsonLink.click();
+    xmlLink.click();
+
+    // Освобождение URL-объектов
+    URL.revokeObjectURL(jsonUrl);
+    URL.revokeObjectURL(xmlUrl);
 });
+
+function convertToXml(obj) {
+    let xml = '';
+    for (let prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            xml += "<" + prop + ">" + obj[prop] + "</" + prop + ">";
+        }
+    }
+    return "<root>" + xml + "</root>";
+}
