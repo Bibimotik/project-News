@@ -5,17 +5,32 @@ document.getElementById("send").addEventListener("click", function() {
         email: email
     };
 
-    let jsonData1 = JSON.stringify(userData, null, 2);
+    let jsonData = JSON.stringify(userData, null, 2);
 
-    let blob = new Blob([jsonData1], { type: "application/json" });
-    let url = URL.createObjectURL(blob);
+    let xmlData = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xmlData += '<user>\n';
+    xmlData += '  <email>' + email + '</email>\n';
+    xmlData += '</user>';
 
-    let link = document.createElement("a");
-    link.href = url;
+    let jsonBlob = new Blob([jsonData], { type: "application/json" });
+    let jsonUrl = URL.createObjectURL(jsonBlob);
+
+    let xmlBlob = new Blob([xmlData], { type: "application/xml" });
+    let xmlUrl = URL.createObjectURL(xmlBlob);
+
+    let jsonLink = document.createElement("a");
+    jsonLink.href = jsonUrl;
+
+    let xmlLink = document.createElement("a");
+    xmlLink.href = xmlUrl;
 
     let timestamp = new Date().getTime();
-    link.download = "data_email_" + timestamp + ".json";
-    link.click();
+    jsonLink.download = "data_email_" + timestamp + ".json";
+    xmlLink.download = "data_email_" + timestamp + ".xml";
 
-    URL.revokeObjectURL(url);
+    jsonLink.click();
+    xmlLink.click();
+
+    URL.revokeObjectURL(jsonUrl);
+    URL.revokeObjectURL(xmlUrl);
 });
