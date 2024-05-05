@@ -31,3 +31,8 @@ section img {
     width: 700px;
     height: 466px;
 }
+
+.big-logo {
+    height: 100px;
+    width: 100px;
+}

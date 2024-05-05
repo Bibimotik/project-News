@@ -15,6 +15,10 @@ img {
 .top, section, .bottom {
     margin: 0 10px 0 10px;
 }
+
+a:visited, a:link, a:hover {
+    color: black;
+}
 /*----------------------------------MAIN-CONTENT----------------------------------------------------------------------*/
 .presentation {
     margin-top: 25px;
