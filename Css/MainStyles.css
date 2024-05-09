@@ -171,3 +171,143 @@ a:visited, a:link, a:hover {
         font-weight: 400;
     }
 }
+
+@media (min-width: 1000px) {
+    .main-block {
+        display: flex;
+    }
+    .main-block2 {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .main-block {
+        display: none;
+    }
+    .main-block2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .news-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 53px;
+    }
+
+    .first-cards-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .first-cards-container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .second-cards-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .second-cards-container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .first-cards-container div h5, .second-cards-container div h5 {
+        font-size: 20px;
+    }
+
+    .first-cards-container div h2, .second-cards-container div h2 {
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .first-cards-container div strong, .second-cards-container div strong {
+        font-size: 25px;
+    }
+
+    .news-cards .cards-title {
+        font-family: "Libre Franklin", sans-serif;
+        line-height: 120%;
+        letter-spacing: 1px;
+        color: #999999;
+        font-size: 25px;
+        align-self: flex-start;
+        margin-left: 6%;
+        margin-bottom: 15px;
+    }
+
+    .news-cards h5, h2 {
+        font-weight: 400;
+    }
+
+    .news-cards h2 {
+        line-height: 24px;
+    }
+
+    .news-cards strong {
+        font-size: 10px;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        margin-top: 10px;
+    }
+
+    .news-cards h5 {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 10px;
+        margin-top: 15px;
+        color: #999999;
+    }
+
+    .news-cards h2 {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 19px;
+        margin-top: 18px;
+        color: #000000;
+    }
+
+    .news-cards .first-cards-container img, .news-cards .second-cards-container img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .button-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .news-cards button {
+        width: 405px;
+        height: 84px;
+        outline: none;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #FFFFFF;
+        border: 2px solid #000000;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    .news-cards .first-cards-container, .news-cards .second-cards-container {
+        display: block;
+    }
+}

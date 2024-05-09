@@ -114,3 +114,64 @@ footer ul li, footer h3 {
 .information .second-ul {
     margin-left: 18px;
 }
+
+@media (min-width: 1000px) {
+    .bottom {
+        display: block;
+    }
+    .second-bottom {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .bottom {
+        display: none;
+    }
+    footer {
+        height: 400px;
+    }
+    .second-bottom {
+        display: block;
+        height: 200px;
+    }
+    .send-email2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-bottom .main-footer-link {
+        font-size: 30px;
+        margin-left: 15px;
+    }
+
+    .send-email2 input {
+        width: 75%;
+        height: 74px;
+        font-size: 25px;
+        margin-top: 15px;
+        padding: 0 0 0 10px;
+        font-family: "Libre Franklin", sans-serif;
+        outline: none;
+    }
+
+    .send-email2 button {
+        width: 76.5%;
+        height: 74px;
+        margin-top: 15px;
+        text-align: center;
+        color: white;
+        background-color: black;
+        font-size: 25px;
+        border: none;
+        outline: none;
+    }
+
+    .send-email2 span {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 35px;
+        color: #666666;
+        margin-top: 20px;
+    }
+}

@@ -105,3 +105,60 @@ p {
         height: 187px;
     }
 }
+
+@media (max-width: 1000px) {
+    .container1 h1 {
+        margin-left: 54%;
+    }
+    .second-section {
+        margin-top: 28px;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .second-section .cards-container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .second-section .cards-container div h2 {
+        text-align: center;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 30px;
+        margin-top: 18px;
+        color: #000000;
+    }
+    .second-section .cards-container div h5 {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        margin-top: 15px;
+        color: #999999;
+    }
+    .second-section .cards-container div strong {
+        font-size: 25px;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        margin-top: 10px;
+    }
+    .cards-container div img {
+        height: 120%;
+        width: 120%;
+    }
+    .second-section .cards-title {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 1px;
+        color: #999999;
+        margin-left: 6%;
+    }
+}
